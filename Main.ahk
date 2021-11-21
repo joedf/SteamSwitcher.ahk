@@ -1,7 +1,7 @@
 #NoEnv
 #Include <Steam>
 
-Gui, Add, ListView, gLAcc, Double-Click user name to set the account|
+Gui, Add, ListView, vLAcc gLAcc, Double-Click user name to set the account|
 Gui, Show, , Steam Switcher
 
 gosub, list_accounts
@@ -24,6 +24,9 @@ if (A_GuiEvent = "DoubleClick")  ; There are many other possible values the scri
     LV_GetText(UserName, A_EventInfo, 1)
 	if StrLen(UserName) > 3
 	{
+		GuiControl, Disable, LAcc
+		LV_Add()
+		
 		Steam.SetAutoLoginUser(UserName)
 		Steam.SetAccountSettings(UserName, {WantsOfflineMode:0,SkipOfflineModeWarning:0})
 		
@@ -31,8 +34,12 @@ if (A_GuiEvent = "DoubleClick")  ; There are many other possible values the scri
 		pid:= ErrorLevel
 		if %pid%
 		{
+			LV_Add("", "Restarting Steam, please wait ...")
 			Steam.Exit()
 			Process, WaitClose, %pid%, 5
+			Sleep, 3000
+		} else {
+			LV_Add("", "Starting Steam, please wait ...")
 		}
 		
 		Steam.Start()
