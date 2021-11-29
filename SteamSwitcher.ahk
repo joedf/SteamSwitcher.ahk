@@ -1,3 +1,7 @@
+;@Ahk2Exe-SetMainIcon res/icon.ico
+;@Ahk2Exe-SetCopyright joedf (2021)
+;@Ahk2Exe-SetDescription Simplest AHK based Steam account switcher.
+
 #NoEnv
 #Include <Steam>
 
