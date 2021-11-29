@@ -1,5 +1,5 @@
-# ![*](res/logo48.png) SteamSwitcher.ahk
-Simplest AHK based Steam account switcher
+# <img alt="SteamSwitcher Logo" width="48" src="res/logo.svg"> SteamSwitcher.ahk
+Simplest [AHK](https://www.autohotkey.com/)-based [Steam](https://en.wikipedia.org/wiki/Steam_(service)) account switcher
 
 Just run SteamSwitcher.ahk, and double click the username of the account you want active.
 
