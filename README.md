@@ -7,4 +7,6 @@ To setup the accounts, sign-in (with remember password) and sign-in (log out if 
 
 ![screenshot1](res/screenshot01.png)
 
+Special thanks to [lemasato](https://github.com/lemasato/Steam-Account-Switcher).
+
 Forum topic: https://www.autohotkey.com/boards/viewtopic.php?f=19&t=97701
